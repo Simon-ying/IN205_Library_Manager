@@ -19,4 +19,16 @@ public enum Abonnement {
 	public int getValue() {
 		return this.value;
 	}
+	public static Abonnement getFromString(String type) {
+		switch(type.toLowerCase()) {
+		case "basic":
+			return Abonnement.BASIC;
+		case "premium":
+			return Abonnement.PREMIUM;
+		case "vip":
+			return Abonnement.VIP;
+		default:
+			return null;
+		}
+	}
 }

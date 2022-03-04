@@ -13,14 +13,15 @@ public class Livre {
 		this.auteur = auteur;
 		this.isbn = isbn;
 	}
+	
+	
 
 	@Override
 	public String toString() {
-		return "Livre [id=" + id + ", titre=" + titre + ", auteur=" + auteur + ", isbn=" + isbn + ", getId()=" + getId()
-				+ ", getTitre()=" + getTitre() + ", getAuteur()=" + getAuteur() + ", getIsbn()=" + getIsbn()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+		return "Livre [id=" + id + ", titre=" + titre + ", auteur=" + auteur + ", isbn=" + isbn + "]";
 	}
+
+
 
 	public int getId() {
 		return id;

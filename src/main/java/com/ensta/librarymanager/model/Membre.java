@@ -24,11 +24,15 @@ public class Membre {
 		this.abon = abon;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Membre [nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", email=" + email
+		return "Membre [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", email=" + email
 				+ ", telephone=" + telephone + ", abon=" + abon + "]";
 	}
+
+
 
 	public int getId() {
 		return id;

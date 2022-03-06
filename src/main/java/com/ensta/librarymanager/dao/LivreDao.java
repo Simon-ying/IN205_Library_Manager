@@ -41,7 +41,7 @@ public class LivreDao implements ILivreDao {
 			}
 		}
 		catch(SQLException e) {
-			throw new DaoException("Problem occured when fetching the book list.");
+			throw new DaoException("Problem occured when fetching the book list");
 		}
 		finally{
 			try {
@@ -79,7 +79,7 @@ public class LivreDao implements ILivreDao {
 			}
 		}
 		catch(SQLException e) {
-			throw new DaoException("Problem occured when searching the book.");
+			throw new DaoException("Problem occured when searching the book");
 		}
 		finally{
 			try {
@@ -117,7 +117,7 @@ public class LivreDao implements ILivreDao {
 			}
 		}
 		catch(SQLException e) {
-			throw new DaoException("Problem occured when adding new book.");
+			throw new DaoException("Problem occured when adding new book");
 		}
 		finally {
 			try {
@@ -149,7 +149,7 @@ public class LivreDao implements ILivreDao {
 			createPreparedStatement.executeUpdate();
 		}
 		catch (SQLException e) {
-			throw new DaoException("Problem occured when updating the book list.");
+			throw new DaoException("Problem occured when updating the book list");
 		}
 		finally{
 			try {
@@ -176,7 +176,7 @@ public class LivreDao implements ILivreDao {
 			createPreparedStatement.executeUpdate();
 		}
 		catch (SQLException e) {
-			throw new DaoException("Problem occured when deleting a book.");
+			throw new DaoException("Problem occured when deleting a book");
 		}
 		finally{
 			try {
@@ -206,7 +206,7 @@ public class LivreDao implements ILivreDao {
 			}
 		}
 		catch (SQLException e) {
-			throw new DaoException("Problem occured when counting the book list.");
+			throw new DaoException("Problem occured when counting the book list");
 		}
 		finally{
 			try {

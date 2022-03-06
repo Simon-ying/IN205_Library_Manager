@@ -345,7 +345,7 @@ public class EmpruntDao implements IEmpruntDao {
 			createPreparedStatement.executeUpdate();
 		}
 		catch (SQLException e) {
-			throw new DaoException("Problem occured when fetching the borrowing list");
+			throw new DaoException("Problem occured when updating the borrowing list");
 		}
 		finally{
 			try {

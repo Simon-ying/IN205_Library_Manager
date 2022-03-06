@@ -1,9 +1,9 @@
 package com.ensta.librarymanager.utils;
 
 public enum Abonnement {
-	BASIC("Basic", 0),
-	PREMIUM("Premium", 1),
-	VIP("Vip", 2);
+	BASIC("Basic", 2),
+	PREMIUM("Premium", 5),
+	VIP("Vip", 20);
 	
 	private String type;
 	private int value;

@@ -78,8 +78,8 @@ public class Membre {
 		this.telephone = telephone;
 	}
 	
-	public String getAbon() {
-		return abon.getType();
+	public Abonnement getAbon() {
+		return abon;
 	}
 	
 	public void setAbon(Abonnement abon) {

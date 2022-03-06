@@ -1,16 +1,18 @@
 package test;
 
 import java.time.LocalDate;
+import com.ensta.librarymanager.utils.*;
 
 import com.ensta.librarymanager.dao.*;
-import com.ensta.librarymanager.exception.DaoException;
 import com.ensta.librarymanager.model.*;
 import com.ensta.librarymanager.utils.Abonnement;
 public class DaoTest {
 	public static void print(String s) {
 		System.out.println(s);
 	}
-	public static void main(String args[]) throws DaoException {
+	public static void main(String args[]) throws Exception {
+		FillDatabase.main(args);
+		
 		LivreDao bookInstance = LivreDao.getInstance();
 		MembreDao memberInstance = MembreDao.getInstance();
 		EmpruntDao borrowInstance = EmpruntDao.getInstance();
@@ -18,44 +20,46 @@ public class DaoTest {
 		/*
 		 * Test LivreDao
 		 */
-//		System.out.println(bookInstance.count());
-//		System.out.println("--------------------");
-//		for (Livre ibook : bookInstance.getList()) {
-//			System.out.println(ibook);
-//		}
-//		System.out.println("--------------------");
-//		System.out.println(bookInstance.getById(1));
-//		System.out.println("--------------------");
-////		bookInstance.delete(12);
-////		bookInstance.create("Le Petit Prince", "De Saint-Exupéry", "978-1406331981");
-//		Livre book = bookInstance.getById(13);
-//		book.setIsbn("140-6331988 ");
-//		bookInstance.update(book);
-//		for (Livre ibook : bookInstance.getList()) {
-//			System.out.println(ibook);
-//		}
+		System.out.println(bookInstance.count());
+		System.out.println("--------------------");
+		for (Livre ibook : bookInstance.getList()) {
+			System.out.println(ibook);
+		}
+		System.out.println("--------------------");
+		System.out.println(bookInstance.getById(1));
+		System.out.println("--------------------");
+//		bookInstance.delete(12);
+		int id = bookInstance.create("Le Petit Prince", "De Saint-Exupéry", "978-1406331981");
+		System.out.println("Id created : " + id);
+		Livre book = bookInstance.getById(id);
+		book.setIsbn("140-6331988 ");
+		bookInstance.update(book);
+		for (Livre ibook : bookInstance.getList()) {
+			System.out.println(ibook);
+		}
 		
 		
 		
 		/*
 		 * Test MembreDao
 		 */
-//		System.out.println(memberInstance.count());
-//		System.out.println("--------------------");
-//		for (Membre imember : memberInstance.getList()) {
-//			System.out.println(imember);
-//		}
-//		System.out.println("--------------------");
-//		System.out.println(memberInstance.getById(1));
-//		System.out.println("--------------------");
-////		memberInstance.create("Simon", "YING", "Paris", "566@example.com", "11111");
-////		Membre member = memberInstance.getById(1);
-////		member.setAbon(Abonnement.VIP);
-////		memberInstance.update(member);
-////		memberInstance.delete(13);
-//		for (Membre imember : memberInstance.getList()) {
-//			System.out.println(imember);
-//		}
+		System.out.println(memberInstance.count());
+		System.out.println("--------------------");
+		for (Membre imember : memberInstance.getList()) {
+			System.out.println(imember);
+		}
+		System.out.println("--------------------");
+		System.out.println(memberInstance.getById(1));
+		System.out.println("--------------------");
+		id = memberInstance.create("Simon", "YING", "Paris", "566@example.com", "11111");
+		System.out.println("Id created : " + id);
+		Membre member = memberInstance.getById(id);
+		member.setAbon(Abonnement.VIP);
+		memberInstance.update(member);
+		memberInstance.delete(id);
+		for (Membre imember : memberInstance.getList()) {
+			System.out.println(imember);
+		}
 		
 		
 		

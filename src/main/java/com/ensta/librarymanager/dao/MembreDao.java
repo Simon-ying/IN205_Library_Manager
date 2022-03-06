@@ -47,7 +47,7 @@ public class MembreDao implements IMembreDao {
 			}
 		}
 		catch(SQLException e) {
-			throw new DaoException("Problem occured when fetching the member list.");
+			throw new DaoException("Problem occured when fetching the member list");
 		}
 		finally{
 			try {
@@ -89,7 +89,7 @@ public class MembreDao implements IMembreDao {
 			}
 		}
 		catch(SQLException e) {
-			throw new DaoException("Problem occured when searching the member.");
+			throw new DaoException("Problem occured when searching the member");
 		}
 		finally{
 			try {
@@ -133,7 +133,7 @@ public class MembreDao implements IMembreDao {
 			}
 		}
 		catch(SQLException e) {
-			throw new DaoException("Problem occured when adding new member.");
+			throw new DaoException("Problem occured when adding new member");
 		}
 		finally {
 			try {
@@ -165,7 +165,7 @@ public class MembreDao implements IMembreDao {
 			createPreparedStatement.setString(3, membre.getAdresse());
 			createPreparedStatement.setString(4, membre.getEmail());
 			createPreparedStatement.setString(5, membre.getTelephone());
-			createPreparedStatement.setString(6, membre.getAbon());
+			createPreparedStatement.setString(6, membre.getAbon().getType());
 			createPreparedStatement.setInt(7, membre.getId());
 			createPreparedStatement.executeUpdate();
 		}
@@ -197,7 +197,7 @@ public class MembreDao implements IMembreDao {
 			createPreparedStatement.executeUpdate();
 		}
 		catch (SQLException e) {
-			throw new DaoException("Problem occured when deleting the member list");
+			throw new DaoException("Problem occured when deleting a member");
 		}
 		finally{
 			try {
@@ -227,7 +227,7 @@ public class MembreDao implements IMembreDao {
 			}
 		}
 		catch (SQLException e) {
-			throw new DaoException("Problem occured when counting the member list.");
+			throw new DaoException("Problem occured when counting the member list");
 		}
 		finally{
 			try {

@@ -25,4 +25,5 @@
   });
 
   </script>
-  <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+  <!-- <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script> -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>

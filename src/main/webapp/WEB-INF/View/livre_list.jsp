@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,13 +32,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                
-                    <tr>
-                        <td>Titre du livre</td>
-                        <td>Nom de l'auteur</td>
-                        <td>ISBN du livre</td>
-                        <td class="center"><a href="livre_details?id=idDuLivre"><ion-icon class="details" name="information-circle-outline"></ion-icon></a></td>
-                    </tr>
+                	<c:if test="${!bookList.isEmpty()}">
+                		<c:forEach items="${bookList}" var="ibook">
+                			<tr>
+                        		<td>${ibook.titre}</td>
+                        		<td>${ibook.auteur}</td>
+                        		<td>${ibook.isbn }</td>
+                        		<td class="center"><a href="livre_details?id=${ibook.id }"><ion-icon class="details" name="information-circle-outline"></ion-icon></a></td>
+                    		</tr>
+                		</c:forEach>
+                	</c:if>
+                    
                     
                     <!-- TODO : parcourir la liste des livres et les afficher selon la structure d'exemple ci-dessus -->
                 </tbody>
